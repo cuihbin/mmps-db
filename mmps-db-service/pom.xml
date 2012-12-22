@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>com.zzvc.mmps</groupId>
+    <artifactId>mmps-db</artifactId>
+    <version>1.2.0-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>mmps-db-service</artifactId>
+  <name>mmps-db-service</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.zzvc.mmps</groupId>
+      <artifactId>mmps-db-${dao.framework}</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.appfuse</groupId>
+      <artifactId>appfuse-service</artifactId>
+      <version>${appfuse.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+  </dependencies>
+</project>

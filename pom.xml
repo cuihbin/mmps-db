@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <parent>
+    <groupId>com.zzvc.mmps</groupId>
+    <artifactId>mmps-parent</artifactId>
+    <version>6-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>mmps-db</artifactId>
+  <packaging>pom</packaging>
+  <name>mmps-db</name>
+  <version>1.2.0-SNAPSHOT</version>
+
+  <scm>
+    <connection>scm:git:git@github.com:cuihbin/mmps-db.git</connection>
+    <developerConnection>scm:git:git@github.com:cuihbin/mmps-db.git</developerConnection>
+    <url>https://github.com/cuihbin</url>
+  </scm>
+
+  <modules>
+    <module>mmps-db-hibernate</module>
+    <module>mmps-db-service</module>
+  </modules>
+
+</project>
