@@ -4,7 +4,6 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-  <!-- For mail settings and future properties files -->
   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="ignoreUnresolvablePlaceholders" value="true" />
     <property name="locations">
@@ -13,6 +12,9 @@
       </list>
     </property>
   </bean>
+
+  <bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator" />
+  <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 
   <!-- System database connection configurations -->
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
@@ -46,10 +48,16 @@
     </property>
   </bean>
 
+  <!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+  <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+    <property name="sessionFactory" ref="sessionFactory" />
+  </bean>
+
   <!-- Activates scanning of @Autowired -->
   <context:annotation-config />
 
   <!-- Activates scanning of @Repository -->
+  <context:component-scan base-package="org.appfuse.dao" />
   <context:component-scan base-package="com.zzvc.mmps" />
 
 </beans>
