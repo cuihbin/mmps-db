@@ -3,11 +3,8 @@ package com.zzvc.mmps.service.impl;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.stereotype.Service;
 
 import com.zzvc.mmps.dao.UniversalDao;
 import com.zzvc.mmps.service.UniversalManager;
@@ -18,7 +15,6 @@ import com.zzvc.mmps.service.UniversalManager;
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
  */
-@Service("universalManager")
 public class UniversalManagerImpl implements UniversalManager {
     /**
      * Log instance for all child classes. Uses LogFactory.getLog(getClass()) from Commons Logging
@@ -28,8 +24,11 @@ public class UniversalManagerImpl implements UniversalManager {
     /**
      * UniversalDao instance, ready to charge forward and persist to the database
      */
-    @Resource
     protected UniversalDao universalDao;
+ 
+    public void setUniversalDao(UniversalDao universalDao) {
+        this.universalDao = universalDao;
+    }
 
     /**
      * {@inheritDoc}
