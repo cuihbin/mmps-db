@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.zzvc.mmps.dao.UniversalDao;
 import com.zzvc.mmps.service.UniversalManager;
@@ -15,6 +17,7 @@ import com.zzvc.mmps.service.UniversalManager;
  *
  * @author <a href="mailto:matt@raibledesigns.com">Matt Raible</a>
  */
+@Service("universalManager")
 public class UniversalManagerImpl implements UniversalManager {
     /**
      * Log instance for all child classes. Uses LogFactory.getLog(getClass()) from Commons Logging
@@ -25,7 +28,8 @@ public class UniversalManagerImpl implements UniversalManager {
      * UniversalDao instance, ready to charge forward and persist to the database
      */
     protected UniversalDao universalDao;
- 
+
+    @Autowired
     public void setUniversalDao(UniversalDao universalDao) {
         this.universalDao = universalDao;
     }

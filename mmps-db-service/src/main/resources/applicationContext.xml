@@ -51,8 +51,4 @@
   <!-- Encryption in UserManagerImpl. Can override in security.xml. -->
   <!-- =================================================================== -->
   <bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" />
-
-  <bean id="manager" class="com.zzvc.mmps.service.impl.UniversalManagerImpl">
-    <property name="universalDao" ref="universalDao" />
-  </bean>
 </beans>
