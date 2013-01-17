@@ -38,22 +38,4 @@
       <artifactId>commons-dbcp</artifactId>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>data</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>hibernate3-maven-plugin</artifactId>
-          </plugin>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>sql-maven-plugin</artifactId>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
