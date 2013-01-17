@@ -1,5 +1,6 @@
 mmps-db-2.1
  + Remove dataSource bean to allow application-specific configuration
+ + Remove ehcache.xml to allow application-specific configuration
 
 mmps-db-2.0
  + Use annotation configure
