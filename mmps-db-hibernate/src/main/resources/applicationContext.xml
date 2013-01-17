@@ -25,18 +25,6 @@
         <value>com.zzvc.mmps.**.model</value>
       </list>
     </property>
-    <property name="hibernateProperties">
-      <props>
-        <prop key="hibernate.dialect">${hibernate.dialect}</prop>
-        <prop key="hibernate.query.substitutions">true 'Y', false 'N'</prop>
-        <prop key="hibernate.cache.use_second_level_cache">true</prop>
-        <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
-        <!-- Hibernate Search index directory -->
-        <prop key="hibernate.search.default.indexBase">${app.search.index.basedir}</prop>
-      </props>
-      <!-- Turn batching off for better error messages under PostgreSQL -->
-      <!-- hibernate.jdbc.batch_size=0 -->
-    </property>
   </bean>
 
   <!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
