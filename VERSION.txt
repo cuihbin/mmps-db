@@ -1,3 +1,6 @@
+mmps-db-2.2
+ + Change to mmps-parent-2.0
+
 mmps-db-2.1
  + Remove dataSource bean to allow application-specific configuration
  + Remove ehcache.xml to allow application-specific configuration
